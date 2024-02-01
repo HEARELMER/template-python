@@ -6,7 +6,7 @@ import numpy as np
 from regresion import calcular_regresion_lineal, calcular_sumatorias, calcularA, calcularB, predecir_y
 
 app = Flask(__name__)
-CORS(app, origins="https://pep-sis.web.app")
+CORS(app, origins="*")
 port = int(os.environ.get("PORT", 8080))
 
 @app.route('/static/<path:path>')
