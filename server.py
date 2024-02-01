@@ -12,7 +12,9 @@ def serve_static(path):
 @app.route('/')
 def home():
    return render_template('index.html')
-
+@app.route('/hola')
+def backend():
+    return ('hola mundo')
 @app.route('/<path:path>')
 def all_routes(path):
     return redirect('/')
